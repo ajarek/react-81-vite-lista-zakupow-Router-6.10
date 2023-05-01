@@ -5,7 +5,7 @@ import './Main.css'
 const Main = () => {
   return (
     <div className='main-layout'>
-      <Nav display={'none'}/>
+      <Nav />
 
       <Outlet />
     </div>

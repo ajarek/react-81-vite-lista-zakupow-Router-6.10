@@ -1,11 +1,12 @@
 import React from 'react'
+import  CheckboxList from '../../components/CheckboxList/CheckboxList'
 import './List.css'
 const List = ({ array }) => {
   return (
     <ul className='list'>
-      {array.map((el, index) => {
+      {array.map((el) => {
         return (
-          <li key={index}>
+          <li key={el.id} className='li'>
             <div className="li-info-wrapper">
             <img
               src={el.image}
@@ -13,7 +14,7 @@ const List = ({ array }) => {
             />{' '}
             <span>{el.name}</span>
             </div>
-            <input type="checkbox" name="" id="" />
+            <CheckboxList option={el.id} />
           </li>
         )
       })}

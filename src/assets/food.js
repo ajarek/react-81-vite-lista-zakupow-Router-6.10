@@ -1,111 +1,111 @@
 export const food=[
     {
-        
+        id:'1',
         name:'Mięso',
         image:'img/mieso.png',
     },
     {
-        
+        id:'2',
         name:'Wędlina',
         image:'img/wedlina.png',
     },
     {
-        
+        id:'3',
         name:'Kiełbasa',
         image:'img/kiełbasa.png',
     },
     {
-        
+        id:'4',
         name:'Parówki',
         image:'img/parówki.jpg',
     },
     {
-        
+        id:'5',
         name:'Ser żółty',
         image:'img/ser.png',
     },
     {
-        
+        id:'6',
         name:'Chleb',
         image:'img/chleb.png',
     },
     {
-        
+        id:'7',
         name:'Actimel',
         image:'img/actimel.png',
     },
     {
-        
+        id:'8',
         name:'Mleko',
         image:'img/mleko.png',
     },
     {
-        
+        id:'9',
         name:'Masło',
         image:'img/maslo.jpg',
     },
     {
-        
+        id:'10',
         name:'Jaja',
         image:'img/jaja.png',
     },
     {
-        
+        id:'11',
         name:'Kinder-czekoladki',
         image:'img/kinderCz.png',
     },
     {
-        
+        id:'12',
         name:'Kinder kanapka',
         image:'img/kinder-kanapka.jpg',
     },
     {
-        
+        id:'13',
         name:'Pingu',
         image:'img/pingu.png',
     },
     {
-        
+        id:'14',
         name:'Ciastka',
         image:'img/ciastka.png',
     },
     {
-        
+        id:'15',
         name:'Batony',
         image:'img/baton.jpg',
     },
     {
-        
+        id:'16',
         name:'Makaron',
         image:'img/makaron.jpg',
     },
     {
-        
+        id:'17',
         name:'Koncentrat pomidorowy',
         image:'img/koncentrat.jpg',
     },
     {
-        
+        id:'18',
         name:'Olej',
         image:'img/olej.png',
     },
     {
-        
+        id:'19',
         name:'Popcorn',
         image:'img/popcorn.jpg',
     },
     {
-        
+        id:'20',
         name:'Zupki',
         image:'img/zupka.png',
     },
     {
-        
+        id:'21',
         name:'Herbata',
         image:'img/herbata.png',
     },
     {
-        
+        id:'22',
         name:'Przyprawy',
         image:'img/przyprawy.png',
     },
