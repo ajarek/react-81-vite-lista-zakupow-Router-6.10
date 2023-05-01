@@ -1,0 +1,15 @@
+.home {
+  width: 100%;
+  min-height: 100vh;
+
+}
+.title-home{
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--grey);
+  padding:0 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}

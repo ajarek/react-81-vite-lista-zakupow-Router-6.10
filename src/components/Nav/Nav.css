@@ -1,0 +1,26 @@
+.nav {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+   padding: 0 1rem;
+   background: var(--dark);
+}
+.nav .link{
+text-decoration: none;
+color: var(--white);
+margin-right: 1rem;
+font-size: 0.9rem;
+text-transform: uppercase;
+transition: all 0.4s ease-in-out;
+padding: 0.1rem 1rem;
+border-radius: 3px;
+}
+.nav .link:hover{
+  
+ border:2px solid var(--blue) ;
+ 
+}
+.nav .link:focus{
+  border:2px solid var(--blue) ;
+ }

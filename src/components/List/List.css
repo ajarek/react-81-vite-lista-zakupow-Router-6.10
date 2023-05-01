@@ -1,0 +1,22 @@
+.list li{
+ 
+  height: 77px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+
+}
+.li-info-wrapper{
+  display: flex;
+  align-items: center;
+}
+.li-info-wrapper span{
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+.list input[type="checkbox"]{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
