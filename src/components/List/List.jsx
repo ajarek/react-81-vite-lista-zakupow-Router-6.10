@@ -7,7 +7,6 @@ const List = ({ array }) => {
 
   const handleChange = (e) => {
     const { id, value, checked } = e.target
-    console.log(checked);
     if (checked === true) {
       setCheckedValues([...checkedValues, id])
     } else {
