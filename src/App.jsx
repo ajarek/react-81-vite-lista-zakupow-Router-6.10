@@ -1,10 +1,12 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createContext, useState } from 'react'
 import Main from './layouts/Main/Main'
 import Error from './pages/Error/Error'
 import Home from './pages/Home/Home'
 import Shopping from './pages/Shopping/Shopping'
 import Todo from './pages/Todo/Todo'
 
+export const AppContext = createContext()
 
 const router = createBrowserRouter([
   {
@@ -33,9 +35,12 @@ const router = createBrowserRouter([
 ])
 
 function App() {
+  const [checkedValues,setCheckedValues]=useState([])
   return (
     <div id='root'>
+       <AppContext.Provider value={{checkedValues,setCheckedValues}}>
       <RouterProvider router={router} />
+      </AppContext.Provider>
     </div>
   )
 }

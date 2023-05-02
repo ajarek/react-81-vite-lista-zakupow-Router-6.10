@@ -1,7 +1,14 @@
-import React from 'react'
-import  CheckboxList from '../../components/CheckboxList/CheckboxList'
+import { React, useState, useContext, useEffect } from 'react'
+import { AppContext } from '../../App'
 import './List.css'
 const List = ({ array }) => {
+  
+  const { checkedValues,setCheckedValues} = useContext(AppContext)
+const handleChange=(e)=>{
+  const {id,value,checked}=e.target
+  setCheckedValues([...checkedValues,id])
+}
+console.log(checkedValues)
   return (
     <ul className='list'>
       {array.map((el) => {
@@ -14,7 +21,7 @@ const List = ({ array }) => {
             />{' '}
             <span>{el.name}</span>
             </div>
-            <CheckboxList option={el.id} />
+            <input type="checkbox" name="" id={el.id} value={el.name} onChange={handleChange} />
           </li>
         )
       })}

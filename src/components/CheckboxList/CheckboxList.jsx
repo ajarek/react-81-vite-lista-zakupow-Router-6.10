@@ -9,7 +9,7 @@ const CheckboxList = ({option}) => {
       [event.target.name]: event.target.checked, // aktualizuj stan wybranej opcji
     });
   };
-  console.log(checkedItems);
+  
   return (
     <div>
       
