@@ -1,0 +1,32 @@
+.shopping {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+ 
+}
+.title-shopping{
+  position: fixed;
+  top: 50px;
+  height: 50px;
+  width: 375px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--grey);
+  padding:0 1rem;
+  
+}
+.title-shopping span{
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.title-shopping button{
+  padding:0.2rem 1rem;
+  background-color: var(--dark);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}

@@ -23,6 +23,7 @@
 .title-home button{
   padding:0.2rem 1rem;
   background-color: var(--dark);
+  color: var(--white);
   border: none;
   border-radius: 4px;
   cursor: pointer;

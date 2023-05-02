@@ -20,7 +20,7 @@ const Home = () => {
     <div className='home'>
       <div className='title-home'>
         <span>Lista Artykułów</span>
-        <button onClick={saveLocalStorage}>🛒</button>
+        <button onClick={saveLocalStorage}>🛒 add</button>
       </div>
       <List
         array={food}

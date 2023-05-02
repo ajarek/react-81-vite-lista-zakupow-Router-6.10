@@ -18,3 +18,8 @@
   margin-left: 0.5rem;
   font-size: 1.2rem;
 }
+input[type="checkbox"]{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
