@@ -1,10 +1,14 @@
 export const saveStorage = (newData, name) => {
   const localStorageData = localStorage.getItem(name)
-  // let data
-  // localStorageData === null
-  //   ? (data = [])
-  //   : (data = JSON.parse(localStorageData))
-  // data.push(newData)
+  localStorage.setItem(name, JSON.stringify(newData))
+}
+export const saveStoragePush = (newData, name) => {
+  const localStorageDataPush = localStorage.getItem(name)
+  let data
+  localStorageDataPush === null
+    ? (data = [])
+    : (data = JSON.parse(localStorageDataPush) )
+  data.push(newData)
   localStorage.setItem(name, JSON.stringify(newData))
 }
 export const fetchStorage = (key) => {
