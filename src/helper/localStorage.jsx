@@ -17,3 +17,9 @@ export const fetchStorage = (key) => {
 export const deleteStorage = (key) => {
   return localStorage.removeItem(key)
 }
+export const getStorage = (key,setTodo) =>{
+  const newTodo = JSON.parse(localStorage.getItem(key));
+  if (newTodo) {
+    setTodo(newTodo);
+  }
+}

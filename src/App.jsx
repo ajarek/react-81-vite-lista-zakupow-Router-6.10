@@ -36,9 +36,11 @@ const router = createBrowserRouter([
 
 function App() {
   const [checkedValues,setCheckedValues]=useState([])
+  const [value, setValue] = useState('')
+  const [todo, setTodo] = useState([])
   return (
     <div id='root'>
-       <AppContext.Provider value={{checkedValues,setCheckedValues}}>
+       <AppContext.Provider value={{checkedValues,setCheckedValues,value, setValue,todo, setTodo}}>
       <RouterProvider router={router} />
       </AppContext.Provider>
     </div>

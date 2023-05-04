@@ -1,33 +1,34 @@
-import React, { useEffect, useState } from 'react'
+import { React, useState, useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { AppContext } from '../../App'
 import {
   saveStorage,
   fetchStorage,
   saveStoragePush,
+  getStorage
 } from '../../helper/localStorage'
 import Input from '../../components/Input/Input'
 import './Todo.css'
 const Todo = () => {
   const navigate = useNavigate()
-  const [value, setValue] = useState('')
-  const [todo, setTodo] = useState([])
-  const [localTodo, setLocalTodo] = useState([])
-  const handleInputChange = (e) => {
-    setValue(e.target.value)
+  const {  todo, setTodo, setValue } =
+    useContext(AppContext)
+
+  const addTodo = (e) => {
+    e.preventDefault()
+  setTodo([...todo, e.target[0].value])
+  setValue('')
   }
 
-  const addedTodo = (e) => {
-    setTodo([...todo, value])
-  }
   useEffect(() => {
-     
-      saveStoragePush(todo, 'todo')
-    
-    
+    if (todo.length>0)
+   { saveStoragePush(todo,'todo')}
   }, [todo])
+
   useEffect(() => {
-    setTodo(fetchStorage('todo'))
-  }, [])
+    getStorage('todo',setTodo)
+  },[])
+
   const strikethroughText = (e) => {
     if (e.target.style.textDecoration !== 'line-through') {
       e.target.style.textDecoration = 'line-through'
@@ -36,40 +37,38 @@ const Todo = () => {
     }
   }
 
-  const deleteItem = (e) => {
-    const filterTodo = todo.filter((item) => item.id != e.target.id)
-    saveStorage(filterTodo, 'food')
-    navigate('/zakupy')
-  }
+  const removeTodo = (index) => {
+    const newTodo = [...todo];
+    newTodo.splice(index, 1);
+    setTodo(newTodo)
+    saveStorage(newTodo,'todo')
+  };
 
   return (
     <div className='todo'>
       <div className='title-todo'>
-        <Input
-          value={value}
-          onChange={handleInputChange}
-        />
-        <button onClick={addedTodo}>🖊️ add</button>
+        <Input onSubmit={addTodo} />
       </div>
       <ul>
-        {todo && todo.map((td, index) => {
-          return (
-            <li
-              key={index}
-              className='li'
-            >
-              <div onClick={strikethroughText}>{td}</div>
-
-              <button
-                className='delete'
-                id={index}
-                onClick={deleteItem}
+        {todo &&
+          todo.map((td, index) => {
+            return (
+              <li
+                key={index}
+                className='li'
               >
-                ❌
-              </button>
-            </li>
-          )
-        })}
+                <div onClick={strikethroughText}>{td}</div>
+
+                <button
+                  className='delete'
+                  id={index}
+                  onClick={() => removeTodo(index)}
+                >
+                  ❌
+                </button>
+              </li>
+            )
+          })}
       </ul>
     </div>
   )
