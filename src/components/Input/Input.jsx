@@ -18,6 +18,7 @@ const Input = ({onSubmit, placeholder }) => {
       value={value}
       onChange={(e)=>setValue(e.target.value)}
       placeholder={placeholder}
+      aria-label={'note'}
     />
      <button className='submit' type='submit'>🖊️ add</button>
     </form>
