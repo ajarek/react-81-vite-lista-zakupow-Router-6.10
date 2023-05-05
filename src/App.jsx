@@ -41,7 +41,7 @@ function App() {
   return (
     <div id='root'>
        <AppContext.Provider value={{checkedValues,setCheckedValues,value, setValue,todo, setTodo}}>
-      <RouterProvider router={router} />
+      <RouterProvider router={router} basename={process.env.PUBLIC_URL} />
       </AppContext.Provider>
     </div>
   )
