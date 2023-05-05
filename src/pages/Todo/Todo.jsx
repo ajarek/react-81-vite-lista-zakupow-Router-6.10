@@ -51,7 +51,9 @@ const Todo = () => {
       </div>
       <ul>
         {todo &&
-          todo.map((td, index) => {
+          todo
+          .sort((a, b) => a.localeCompare(b))
+          .map((td, index) => {
             return (
               <li
                 key={index}
