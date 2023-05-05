@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider,createHashRouter } from 'react-router-dom'
 import { createContext, useState } from 'react'
 import Main from './layouts/Main/Main'
 import Error from './pages/Error/Error'
@@ -8,7 +8,7 @@ import Todo from './pages/Todo/Todo'
 
 export const AppContext = createContext()
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <Main />,
@@ -41,7 +41,7 @@ function App() {
   return (
     <div id='root'>
        <AppContext.Provider value={{checkedValues,setCheckedValues,value, setValue,todo, setTodo}}>
-      <RouterProvider router={router} basename={process.env.PUBLIC_URL} />
+      <RouterProvider router={router}  />
       </AppContext.Provider>
     </div>
   )
