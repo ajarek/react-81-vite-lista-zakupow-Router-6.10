@@ -1,16 +1,14 @@
-import { React, useState, useContext, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { React, useContext, useEffect } from 'react'
 import { AppContext } from '../../App'
 import {
   saveStorage,
-  fetchStorage,
   saveStoragePush,
   getStorage
 } from '../../helper/localStorage'
 import Input from '../../components/Input/Input'
 import './Todo.css'
 const Todo = () => {
-  const navigate = useNavigate()
+  
   const {  todo, setTodo, setValue } =
     useContext(AppContext)
 
@@ -52,7 +50,7 @@ const Todo = () => {
       <ul>
         {todo &&
           todo
-          .sort((a, b) => a.localeCompare(b))
+          .sort()
           .map((td, index) => {
             return (
               <li

@@ -149,10 +149,7 @@ export const food = [
     name: 'Pomidory',
     image: 'img/pomidory.png',
   },
-  { id: '31',
-   name: 'Ziemniaki',
-    image: 'img/ziemniaki.png',
-  },
+  { id: '31', name: 'Ziemniaki', image: 'img/ziemniaki.png' },
   {
     id: '32',
     name: 'Mydło',

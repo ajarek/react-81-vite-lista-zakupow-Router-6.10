@@ -1,8 +1,7 @@
-.list{
+.list {
   margin-top: 50px;
 }
-.list li{
- 
+.list li {
   height: 77px;
   display: flex;
   align-items: center;
@@ -10,15 +9,15 @@
   padding: 1rem;
   border-bottom: 2px solid var(--grey);
 }
-.li-info-wrapper{
+.li-info-wrapper {
   display: flex;
   align-items: center;
 }
-.li-info-wrapper span{
+.li-info-wrapper span {
   margin-left: 0.5rem;
   font-size: 1.2rem;
 }
-input[type="checkbox"]{
+input[type='checkbox'] {
   width: 30px;
   height: 30px;
   cursor: pointer;

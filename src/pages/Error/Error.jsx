@@ -15,7 +15,7 @@ const Error = () => {
           style={{
             border: '2px solid violet',
             marginTop: '1rem',
-            marginRight: '1rem',
+            marginBottom: '1rem',
             padding: '0 1rem',
             fontSize: '1.3rem',
             cursor: 'pointer',
@@ -24,6 +24,7 @@ const Error = () => {
         >
           <span>Go Back 🔙</span>
         </button>
+        <br />
         <Link
           to='/'
           className='link'
@@ -33,6 +34,7 @@ const Error = () => {
             fontWeight: '500',
             marginTop: '1rem',
             padding: '0 1rem',
+            textDecoration: 'none',
           }}
         >
           <span>Go Home 🏠</span>

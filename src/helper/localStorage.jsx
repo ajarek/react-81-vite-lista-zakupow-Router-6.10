@@ -7,7 +7,7 @@ export const saveStoragePush = (newData, name) => {
   let data
   localStorageDataPush === null
     ? (data = [])
-    : (data = JSON.parse(localStorageDataPush) )
+    : (data = JSON.parse(localStorageDataPush))
   data.push(newData)
   localStorage.setItem(name, JSON.stringify(newData))
 }
@@ -17,9 +17,9 @@ export const fetchStorage = (key) => {
 export const deleteStorage = (key) => {
   return localStorage.removeItem(key)
 }
-export const getStorage = (key,setTodo) =>{
-  const newTodo = JSON.parse(localStorage.getItem(key));
+export const getStorage = (key, setTodo) => {
+  const newTodo = JSON.parse(localStorage.getItem(key))
   if (newTodo) {
-    setTodo(newTodo);
+    setTodo(newTodo)
   }
 }

@@ -1,4 +1,8 @@
-import { createBrowserRouter, RouterProvider,createHashRouter } from 'react-router-dom'
+import {
+  createBrowserRouter,
+  RouterProvider,
+  createHashRouter,
+} from 'react-router-dom'
 import { createContext, useState } from 'react'
 import Main from './layouts/Main/Main'
 import Error from './pages/Error/Error'
@@ -29,19 +33,27 @@ const router = createHashRouter([
         element: <Todo />,
         errorElement: <Error />,
       },
-      
     ],
   },
 ])
 
 function App() {
-  const [checkedValues,setCheckedValues]=useState([])
+  const [checkedValues, setCheckedValues] = useState([])
   const [value, setValue] = useState('')
   const [todo, setTodo] = useState([])
   return (
     <div id='root'>
-       <AppContext.Provider value={{checkedValues,setCheckedValues,value, setValue,todo, setTodo}}>
-      <RouterProvider router={router}  />
+      <AppContext.Provider
+        value={{
+          checkedValues,
+          setCheckedValues,
+          value,
+          setValue,
+          todo,
+          setTodo,
+        }}
+      >
+        <RouterProvider router={router} />
       </AppContext.Provider>
     </div>
   )
