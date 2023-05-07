@@ -24,7 +24,10 @@ const Todo = () => {
   }, [todo])
 
   useEffect(() => {
-    getStorage('todo',setTodo)
+    const storedTodo = JSON.parse(localStorage.getItem("todo"));
+    if (storedTodo) {
+      setTodo(storedTodo);
+    }
   },[])
 
   const strikethroughText = (e) => {
@@ -48,10 +51,7 @@ const Todo = () => {
         <Input onSubmit={addTodo} />
       </div>
       <ul>
-        {todo &&
-          todo
-          .sort()
-          .map((td, index) => {
+        {todo.length>0 && todo.sort().map((td, index) => {
             return (
               <li
                 key={index}
